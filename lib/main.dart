@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_theme/screen.dart';
+import 'package:flutter_theme/theme/dark_mode.dart';
+import 'package:flutter_theme/theme/light_mode.dart';
 import 'package:flutter_theme/theme/theme_notifier.dart';
 import 'package:provider/provider.dart';
 
@@ -22,6 +24,17 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: Screen());
+    final themeNotifier = Provider.of<ThemeNotifier>(context);
+
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      darkTheme: darkMode,
+      theme: lightMode,
+      themeMode:
+          themeNotifier.currentTheme == lightMode
+              ? ThemeMode.light
+              : ThemeMode.dark,
+      home: Screen(),
+    );
   }
 }
