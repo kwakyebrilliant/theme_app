@@ -47,16 +47,36 @@ class _ScreenState extends State<Screen> {
               "Theme App",
               style: TextStyle(color: Theme.of(context).colorScheme.surface),
             ),
-            Switch(
-              value: isDarkMode,
-              onChanged: (value) {
+            IconButton(
+              onPressed: () {
                 setState(() {
-                  isDarkMode = value;
-                  saveSwitchState();
+                  // saveSwitchState();
                   themeNotifier.toggleTheme();
+                  isDarkMode = !isDarkMode;
                 });
               },
+              icon:
+                  isDarkMode
+                      ? Icon(
+                        Icons.light_mode_outlined,
+                        color: Theme.of(context).colorScheme.surface,
+                      )
+                      : Icon(
+                        Icons.dark_mode_outlined,
+                        color: Theme.of(context).colorScheme.surface,
+                      ),
             ),
+
+            // Switch(
+            //   value: isDarkMode,
+            //   onChanged: (value) {
+            //     setState(() {
+            //       isDarkMode = value;
+            //       saveSwitchState();
+            //       themeNotifier.toggleTheme();
+            //     });
+            //   },
+            // ),
           ],
         ),
       ),
