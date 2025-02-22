@@ -82,12 +82,15 @@ class _ScreenState extends State<Screen> {
           // Padding around a row
           Padding(
             padding: const EdgeInsets.only(top: 40.0),
-            // Row containing icon and search text
+            // Row containing icon and search text using stack widget inside a sizedbox
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                // SizedBox here
                 SizedBox(
                   width: MediaQuery.of(context).size.width,
+
+                  // Stack here
                   child: Stack(
                     children: [
                       // Icon as background
@@ -102,7 +105,9 @@ class _ScreenState extends State<Screen> {
                         ),
                       ),
 
+                      // Search text centered
                       Center(
+                        // Search Text here
                         child: Text(
                           'Search',
                           style: TextStyle(
@@ -118,6 +123,7 @@ class _ScreenState extends State<Screen> {
               ],
             ),
           ),
+
           Padding(
             padding: const EdgeInsets.only(top: 60.0, left: 20.0, right: 20.0),
             child: Row(
