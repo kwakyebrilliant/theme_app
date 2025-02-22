@@ -56,19 +56,53 @@ class _ScreenState extends State<Screen> {
                       ? Icon(Icons.light_mode_outlined)
                       : Icon(Icons.dark_mode_outlined),
             ),
-
-            // Switch(
-            //   value: isDarkMode,
-            //   onChanged: (value) {
-            //     setState(() {
-            //       isDarkMode = value;
-            //       saveSwitchState();
-            //       themeNotifier.toggleTheme();
-            //     });
-            //   },
-            // ),
           ],
         ),
+      ),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(top: 40.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: MediaQuery.of(context).size.width,
+                  child: Stack(
+                    children: [
+                      // Icon as background
+                      Positioned.fill(
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Icon(
+                            Icons.search,
+                            size: 100.0,
+                            color: Colors.amber.withValues(alpha: 0.6),
+                          ),
+                        ),
+                      ),
+
+                      Center(
+                        child: Text(
+                          'Search',
+                          style: TextStyle(
+                            fontSize: 62.0,
+                            fontWeight: FontWeight.w800,
+                            letterSpacing: 0.5,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 60.0),
+            child: Text('data'),
+          ),
+        ],
       ),
     );
   }
