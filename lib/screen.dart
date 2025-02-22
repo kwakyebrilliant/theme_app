@@ -103,7 +103,40 @@ class _ScreenState extends State<Screen> {
           ),
           Padding(
             padding: const EdgeInsets.only(top: 60.0, left: 20.0, right: 20.0),
-            child: Row(children: [Text('data')]),
+            child: Row(
+              children: [
+                Expanded(
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      hintText: 'Search',
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Theme.of(context).colorScheme.inversePrimary,
+                          width: 1.0,
+                        ),
+                        borderRadius: BorderRadius.circular(5.0),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Theme.of(context).colorScheme.inversePrimary,
+                          width: 1.0,
+                        ),
+                        borderRadius: BorderRadius.circular(5.0),
+                      ),
+                      suffixIcon: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                        child: Icon(Icons.mic_rounded, color: Colors.blue),
+                      ),
+                      contentPadding: EdgeInsets.symmetric(
+                        vertical: 10.0,
+                        horizontal: 10.0,
+                      ),
+                    ),
+                  ),
+                ),
+                Text('data'),
+              ],
+            ),
           ),
         ],
       ),
