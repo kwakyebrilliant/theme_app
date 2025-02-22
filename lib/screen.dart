@@ -109,19 +109,31 @@ class _ScreenState extends State<Screen> {
                   child: TextFormField(
                     decoration: InputDecoration(
                       hintText: 'Search',
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(20.0),
+                          bottomLeft: Radius.circular(20.0),
+                        ),
+                      ),
                       enabledBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: Theme.of(context).colorScheme.inversePrimary,
                           width: 1.0,
                         ),
-                        borderRadius: BorderRadius.circular(5.0),
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(20.0),
+                          bottomLeft: Radius.circular(20.0),
+                        ),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderSide: BorderSide(
                           color: Theme.of(context).colorScheme.inversePrimary,
                           width: 1.0,
                         ),
-                        borderRadius: BorderRadius.circular(5.0),
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(20.0),
+                          bottomLeft: Radius.circular(20.0),
+                        ),
                       ),
                       suffixIcon: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 8.0),
