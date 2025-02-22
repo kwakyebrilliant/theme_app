@@ -124,6 +124,7 @@ class _ScreenState extends State<Screen> {
             ),
           ),
 
+          // Padding around row for Textformfield and container
           Padding(
             padding: const EdgeInsets.only(top: 60.0, left: 20.0, right: 20.0),
             child: Row(
