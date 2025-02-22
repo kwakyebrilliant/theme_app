@@ -129,8 +129,9 @@ class _ScreenState extends State<Screen> {
             padding: const EdgeInsets.only(top: 60.0, left: 20.0, right: 20.0),
             child: Row(
               children: [
-                // Expanded for both textfomfield and search container
+                // Expanded for both textfomfield
                 Expanded(
+                  // Textformfield here
                   child: TextFormField(
                     decoration: InputDecoration(
                       hintText: 'Search',
@@ -165,6 +166,8 @@ class _ScreenState extends State<Screen> {
                     ),
                   ),
                 ),
+
+                // Container for search icon
                 Container(
                   height: 50.0,
                   width: 50.0,
