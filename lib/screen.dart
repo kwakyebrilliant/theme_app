@@ -38,15 +38,11 @@ class _ScreenState extends State<Screen> {
 
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: Theme.of(context).colorScheme.surface,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              "Theme App",
-              style: TextStyle(color: Theme.of(context).colorScheme.surface),
-            ),
+            Text("Theme App"),
             IconButton(
               onPressed: () {
                 setState(() {
@@ -57,14 +53,8 @@ class _ScreenState extends State<Screen> {
               },
               icon:
                   isDarkMode
-                      ? Icon(
-                        Icons.light_mode_outlined,
-                        color: Theme.of(context).colorScheme.surface,
-                      )
-                      : Icon(
-                        Icons.dark_mode_outlined,
-                        color: Theme.of(context).colorScheme.surface,
-                      ),
+                      ? Icon(Icons.light_mode_outlined)
+                      : Icon(Icons.dark_mode_outlined),
             ),
 
             // Switch(
