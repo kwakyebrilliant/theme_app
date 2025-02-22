@@ -32,6 +32,14 @@ class _ScreenState extends State<Screen> {
     prefs.setBool('isDarkMode', isDarkMode);
   }
 
+  // list
+  final List<Map<String, dynamic>> iconList = [
+    {'name': 'Bookmarks', 'icon': Icons.favorite_rounded},
+    {'name': 'Reading List', 'icon': Icons.list_rounded},
+    {'name': 'Recent Tabs', 'icon': Icons.tab_rounded},
+    {'name': 'History', 'icon': Icons.history_rounded},
+  ];
+
   @override
   Widget build(BuildContext context) {
     final themeNotifier = Provider.of<ThemeNotifier>(context);
@@ -147,6 +155,40 @@ class _ScreenState extends State<Screen> {
                   child: Center(child: Icon(Icons.search, color: Colors.blue)),
                 ),
               ],
+            ),
+          ),
+
+          Padding(
+            padding: const EdgeInsets.only(top: 30.0, left: 30.0, right: 30.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children:
+                  iconList.map((list) {
+                    return Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.all(10.0),
+                          decoration: BoxDecoration(
+                            color: Colors.blue.withValues(alpha: 0.2),
+                          ),
+                          child: Icon(
+                            list['icon'],
+                            size: 28.0,
+                            color: Colors.blue,
+                          ),
+                        ),
+                        SizedBox(height: 8.0),
+                        Text(
+                          list['name'],
+                          style: TextStyle(
+                            fontSize: 12.0,
+                            fontWeight: FontWeight.w300,
+                          ),
+                        ),
+                      ],
+                    );
+                  }).toList(),
             ),
           ),
         ],
