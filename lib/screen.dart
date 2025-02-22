@@ -82,6 +82,7 @@ class _ScreenState extends State<Screen> {
           // Padding around a row
           Padding(
             padding: const EdgeInsets.only(top: 40.0),
+            // Row containing icon and search text
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
