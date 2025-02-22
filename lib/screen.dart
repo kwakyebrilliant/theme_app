@@ -79,6 +79,7 @@ class _ScreenState extends State<Screen> {
       // Body starts here
       body: Column(
         children: [
+          // Padding around a row
           Padding(
             padding: const EdgeInsets.only(top: 40.0),
             child: Row(
