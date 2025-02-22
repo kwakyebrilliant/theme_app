@@ -116,20 +116,14 @@ class _ScreenState extends State<Screen> {
                         ),
                       ),
                       enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Theme.of(context).colorScheme.inversePrimary,
-                          width: 1.0,
-                        ),
+                        borderSide: BorderSide(color: Colors.blue, width: 1.0),
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(20.0),
                           bottomLeft: Radius.circular(20.0),
                         ),
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Theme.of(context).colorScheme.inversePrimary,
-                          width: 1.0,
-                        ),
+                        borderSide: BorderSide(color: Colors.blue, width: 1.0),
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(20.0),
                           bottomLeft: Radius.circular(20.0),
@@ -146,7 +140,12 @@ class _ScreenState extends State<Screen> {
                     ),
                   ),
                 ),
-                Text('data'),
+                Container(
+                  height: 50.0,
+                  width: 50.0,
+                  decoration: BoxDecoration(color: Colors.amber),
+                  child: Center(child: Icon(Icons.search, color: Colors.blue)),
+                ),
               ],
             ),
           ),
