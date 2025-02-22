@@ -74,6 +74,9 @@ class _ScreenState extends State<Screen> {
           ],
         ),
       ),
+      // Appbar ends here
+
+      // Body starts here
       body: Column(
         children: [
           Padding(
