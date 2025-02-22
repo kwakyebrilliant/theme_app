@@ -42,7 +42,10 @@ class _ScreenState extends State<Screen> {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text("Theme App"),
+            Text(
+              "Theme App",
+              style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.w500),
+            ),
             IconButton(
               onPressed: () {
                 setState(() {
@@ -99,8 +102,8 @@ class _ScreenState extends State<Screen> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 60.0),
-            child: Text('data'),
+            padding: const EdgeInsets.only(top: 60.0, left: 20.0, right: 20.0),
+            child: Row(children: [Text('data')]),
           ),
         ],
       ),
