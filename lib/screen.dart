@@ -45,19 +45,23 @@ class _ScreenState extends State<Screen> {
     final themeNotifier = Provider.of<ThemeNotifier>(context);
 
     return Scaffold(
+      // Appba starts here
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.surface,
+        // Title items wrapped in a row
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            // Theme app text here
             Text(
               "Theme App",
               style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.w500),
             ),
+
+            // Icon Button for both light and dark mode
             IconButton(
               onPressed: () {
                 setState(() {
-                  // saveSwitchState();
                   themeNotifier.toggleTheme();
                   isDarkMode = !isDarkMode;
                 });
