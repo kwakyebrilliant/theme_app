@@ -178,8 +178,11 @@ class _ScreenState extends State<Screen> {
             ),
           ),
 
+          // Padding around the row for icon list
           Padding(
             padding: const EdgeInsets.only(top: 30.0, left: 30.0, right: 30.0),
+
+            // Row for icon list
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children:
