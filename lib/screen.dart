@@ -195,13 +195,18 @@ class _ScreenState extends State<Screen> {
                           decoration: BoxDecoration(
                             color: Colors.blue.withValues(alpha: 0.2),
                           ),
+
+                          // Icons here
                           child: Icon(
                             list['icon'],
                             size: 28.0,
                             color: Colors.blue,
                           ),
                         ),
+
                         SizedBox(height: 8.0),
+
+                        // Icons here
                         Text(
                           list['name'],
                           style: TextStyle(
